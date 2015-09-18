@@ -1,0 +1,24 @@
+<blockquote>
+  Room : {{room.name}}
+</blockquote>
+
+
+  <div class="row">
+    <div class="col s6">You Name:
+      {{userID}}
+      <input ng-model="room.users[userID].name" >
+      <input ng-model="room.users[userID].id" >
+      <video src="{{myVideoSrc | trusted}}" autoplay></video>
+    </div>
+    <div class="col s6">Friend:
+      <video src="{{theirVideoSrc | trusted}}" autoplay></video>
+    </div>
+  </div>
+
+  <blockquote>
+    Call any of the individuals in this room:
+  </blockquote>
+
+  <div class="collection" ng-repeat="user in room.users | filter:{name: '!!'}">
+    <a class="collection-item" ng-click="call(user.id)">{{user.name}}</a>
+  </div>

@@ -1,0 +1,18 @@
+<div class="container">
+  <blockquote>
+      Only registered users can create rooms.
+  </blockquote>
+  <div class="row">
+    <form>
+      <input type="text" placeholder="Room Name" ng-model="newRoom.name" class="input-field col s6">
+      <input type="checkbox" id="publicRoomChkBox" ng-model="newRoom.public">
+      <label for="publicRoomChkBox">Public</label>
+      <a class="waves-effect waves-light btn" ng-click="createRoom();">Create Room</a>
+    </form>
+  </div>
+
+  <div class="collection" ng-repeat="room in rooms">
+    <a href="/room/{{room._id}}" class="collection-item">{{room.name}}<span class="badge">{{room.users.length}}</span></a>
+  </div>
+
+</div>
