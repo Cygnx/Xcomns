@@ -1,5 +1,6 @@
 # Xcomns
-https://xcomns.meteor.com
+(Depricated due to Meteor free host shutting down)
+~~https://xcomns.meteor.com~~
 
 XComns is a realtime peer to peer cross platform service that allows users to communicate with each other through video calls.
 
